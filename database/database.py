@@ -1,5 +1,3 @@
-# (c) @AbirHasan2005 | X-Noid | @DC4_WARRIOR
-
 import datetime
 import motor.motor_asyncio
 
