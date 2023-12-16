@@ -19,22 +19,18 @@
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
       "value": "ANYTHING"
-      "required": false
     },
     "TG_BOT_TOKEN": {
       "description": "Your bot token, as a string.",
       "value": ""
-      "required": true
     },
     "APP_ID": {
       "description": "Get this value from https://my.telegram.org",
       "value": ""
-      "required": true
     },
     "API_HASH": {
       "description": "Get this value from https://my.telegram.org",
       "value": ""
-      "required": true
     },
     "LOGS_CHANNEL": {
       "description": "id of log channel/group. leave this if you don't want to",
@@ -44,17 +40,14 @@
     "OWNER_ID": {
       "description": "Your Telegram ID",
       "value": ""
-      "required": true
     },
     "DATABASE_URL": {
       "description": "Your MongoDB URI",
       "value": ""
-      "required": true
     },
     "SESSION_NAME": {
       "description": "Your Session Name",
       "value": "URL-UPLOADER"
-      "required": true
     },
     "BANNED_USERS": {
       "description": "Banned Unwanted members..",
