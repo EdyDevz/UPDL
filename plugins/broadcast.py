@@ -1,6 +1,3 @@
-
-# (c) @AbirHasan2005 | X-Noid
-
 import traceback, datetime, asyncio, string, random, time, os, aiofiles, aiofiles.os
 from database.access import clinton
 from pyrogram import filters

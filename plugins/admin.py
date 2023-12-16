@@ -1,6 +1,3 @@
-
-# (c) @AbirHasan2005 | Modifieded By : @DC4_WARRIOR
-
 import traceback
 import os
 

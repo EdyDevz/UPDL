@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | Modifieded By : @DC4_WARRIOR
 
 # the logging things
 import logging
@@ -46,8 +44,8 @@ async def start(bot, message):
     reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Comment", url="https://t.me/ansakubotchannel/1"),
-                    InlineKeyboardButton("🤖 Updates", url="https://t.me/ansakubotchannel")
+                    InlineKeyboardButton("Developer", url="https://t.me/kangbacox"),
+                    InlineKeyboardButton("🤖 Updates", url="https://t.me/dakimemek")
                 ]
             ]
         ),
