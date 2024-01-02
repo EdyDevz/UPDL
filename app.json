@@ -1,5 +1,5 @@
 {
-  "name": "UPDL-BOT",
+  "name": "UPDL",
   "description": "Telegram Bot to Upload URLs to Telegram as File and Video.",
   "keywords": [
     "telegram",
@@ -14,7 +14,9 @@
     "remote",
     "uploader"
   ],
-  "website": "https://github.com/EdyDevz",
+  "success_url": "https://t.me/NiceGank",
+  "website": "https://xynte.me",
+  "repository": "https://github.com/EdyDevz",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
@@ -32,25 +34,12 @@
       "description": "Get this value from https://my.telegram.org",
       "value": ""
     },
-    "LOGS_CHANNEL": {
-      "description": "id of log channel/group. leave this if you don't want to",
-      "value": "",
-      "required": false
+    "AUTH_USERS": {
+      "description": "allow only pre-defined users to use this bot (your id).",
+      "value": "1691174845"
     },
-    "OWNER_ID": {
-      "description": "Your Telegram ID",
-      "value": ""
-    },
-    "DATABASE_URL": {
-      "description": "Your MongoDB URI",
-      "value": ""
-    },
-    "SESSION_NAME": {
-      "description": "Your Session Name",
-      "value": "URL-UPLOADER"
-    },
-    "BANNED_USERS": {
-      "description": "Banned Unwanted members..",
+    "DEF_THUMB_NAIL_VID_S": {
+      "description": "default thumbnail to be used in the videos. Incase, youtube-dl is unable to find a thumbnail.",
       "value": "",
       "required": false
     },
@@ -67,7 +56,7 @@
   "addons": [
   ],
   "buildpacks": [{
-    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
   }, {
     "url": "heroku/python"
   }],
