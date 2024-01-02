@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
+# xynte
 
-# the logging things
-from hachoir.parser import createParser
-from hachoir.metadata import extractMetadata
-import time
-import os
-import asyncio
 import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
+
+import asyncio
+import os
+import time
+from hachoir.metadata import extractMetadata
+from hachoir.parser import createParser
 
 
 async def place_water_mark(input_file, output_file, water_mark_file):
@@ -94,7 +96,6 @@ async def take_screen_shot(video_file, output_directory, ttl):
 
 # https://github.com/Nekmo/telegram-upload/blob/master/telegram_upload/video.py#L26
 
-
 async def cult_small_video(video_file, output_directory, start_time, end_time):
     # https://stackoverflow.com/a/13891070/4723940
     out_put_file_name = output_directory + \
@@ -139,13 +140,14 @@ async def generate_screen_shots(
 ):
     metadata = extractMetadata(createParser(video_file))
     duration = 0
-    if metadata is not None and metadata.has("duration"):
-        duration = metadata.get('duration').seconds
+    if metadata is not None:
+        if metadata.has("duration"):
+            duration = metadata.get('duration').seconds
     if duration > min_duration:
         images = []
         ttl_step = duration // no_of_photos
         current_ttl = ttl_step
-        for _ in range(no_of_photos):
+        for looper in range(0, no_of_photos):
             ss_img = await take_screen_shot(video_file, output_directory, current_ttl)
             current_ttl = current_ttl + ttl_step
             if is_watermarkable:
